@@ -1,1 +1,34 @@
-<p>auth works!</p>
+<div class="auth-container">
+  <h2>{{ esRegistro ? 'Crear una cuenta' : 'Iniciar Sesión' }}</h2>
+
+  <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+      <label>Correo Electrónico</label>
+      <input type="email" formControlName="email" placeholder="ejemplo@correo.com">
+      <span class="error" *ngIf="authForm.get('email')?.invalid && authForm.get('email')?.touched">
+        Por favor ingresa un correo válido.
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" formControlName="password" placeholder="Mínimo 6 caracteres">
+      <span class="error" *ngIf="authForm.get('password')?.invalid && authForm.get('password')?.touched">
+        La contraseña es obligatoria y debe tener al menos 6 caracteres.
+      </span>
+    </div>
+
+    <button type="submit" [disabled]="authForm.invalid">
+      {{ esRegistro ? 'Registrarme' : 'Entrar' }}
+    </button>
+
+  </form>
+
+  <p class="toggle-text">
+    {{ esRegistro ? '¿Ya tienes cuenta?' : '¿No tienes cuenta?' }}
+    <a href="javascript:void(0)" (click)="toggleModo()">
+      {{ esRegistro ? 'Inicia sesión aquí' : 'Regístrate aquí' }}
+    </a>
+  </p>
+</div>
