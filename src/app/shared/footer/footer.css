@@ -1,0 +1,12 @@
+.mi-footer {
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  padding: 20px;
+  margin-top: auto; /* Se asegura de estar siempre al fondo */
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #888;
+}

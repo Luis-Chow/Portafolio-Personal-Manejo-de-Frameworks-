@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div class="home-container">
+  <section class="hero-section">
+    <h1>¡Hola! Bienvenido a mi Portafolio</h1>
+    <p>Soy un desarrollador apasionado por crear software interactivo y soluciones web.</p>
+  </section>
+
+  <section class="skills-section">
+    <h2>Mis Habilidades Técnicas</h2>
+    <p>Un vistazo rápido a mi nivel de dominio en las herramientas que utilizo:</p>
+    
+    <div class="chart-wrapper">
+      <canvas baseChart
+        [data]="radarChartData"
+        [options]="radarChartOptions"
+        [type]="radarChartType">
+      </canvas>
+    </div>
+  </section>
+</div>
