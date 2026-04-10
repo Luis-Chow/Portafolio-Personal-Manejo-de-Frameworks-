@@ -1,85 +1,98 @@
-.projects-container {
-  padding: 40px 20px;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  text-align: center;
-  color: #aaa;
-  margin-bottom: 40px;
-}
-
-/* Cuadrícula adaptable: 1 columna en móviles, hasta 2 o 3 en PC */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
+.detail-container {
+  padding: 20px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.project-card {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+.btn-back {
+  display: inline-block;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.2); /* Brillo verde sutil */
-  border-color: #4CAF50;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.card-content h3 {
+.project-title {
   color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.tab-content {
+  padding: 30px 10px;
+  color: #e0e0e0;
+}
+
+.tab-content h3 {
+  color: #4CAF50;
   margin-top: 0;
-  font-size: 1.5rem;
 }
 
-.card-content p {
-  color: #cccccc;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-.tech-tags {
+/* --- Estilos del Carrusel --- */
+.carousel-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #333;
 }
 
-.tag {
-  background-color: #2c2c2c;
-  color: #4CAF50;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
+.carousel-image {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.carousel-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.1);
+  background-color: #45a049;
+}
+
+.image-counter {
+  text-align: center;
+  margin-top: 15px;
+  color: #888;
+}
+
+/* --- Estilos del Acordeón --- */
+::ng-deep .custom-panel {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+}
+
+::ng-deep .panel-title {
+  color: #ffffff !important;
   font-weight: bold;
 }
 
-.card-footer {
-  background-color: #252525;
-  padding: 15px 20px;
-  text-align: right;
-  color: #4CAF50;
-  font-weight: bold;
-  font-size: 0.9rem;
-  border-top: 1px solid #333;
+.code-block {
+  background-color: #121212;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  border-left: 4px solid #4CAF50;
+}
+
+.code-block code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #a5d6a7;
 }

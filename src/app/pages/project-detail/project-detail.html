@@ -1,20 +1,55 @@
-<div class="projects-container">
-  <h2>Mis Proyectos</h2>
-  <p class="subtitle">Selecciona un proyecto para ver sus evidencias (imágenes, código y detalles).</p>
+<div class="detail-container" *ngIf="proyectoActual">
+  <a routerLink="/proyectos" class="btn-back">⬅ Volver a Proyectos</a>
+  
+  <h1 class="project-title">{{ proyectoActual.titulo }}</h1>
 
-  <div class="projects-grid">
-    <div class="project-card" *ngFor="let proyecto of listaProyectos" [routerLink]="['/proyectos', proyecto.id]">
-      <div class="card-content">
-        <h3>{{ proyecto.titulo }}</h3>
-        <p>{{ proyecto.descripcion }}</p>
-        
-        <div class="tech-tags">
-          <span class="tag" *ngFor="let tech of proyecto.tecnologias">{{ tech }}</span>
+  <mat-tab-group animationDuration="0ms" class="dark-theme-tabs">
+    
+    <mat-tab label="Descripción">
+      <div class="tab-content">
+        <h3>Resumen del Proyecto</h3>
+        <p>{{ proyectoActual.descripcion }}</p>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Multimedia (Imágenes)">
+      <div class="tab-content">
+        <div class="carousel-container">
+          <button class="carousel-btn prev" (click)="anteriorImagen()">❮</button>
+          
+          <img [src]="proyectoActual.imagenes[imagenActualIndex]" alt="Evidencia del proyecto" class="carousel-image">
+          
+          <button class="carousel-btn next" (click)="siguienteImagen()">❯</button>
         </div>
+        <p class="image-counter">Imagen {{ imagenActualIndex + 1 }} de {{ proyectoActual.imagenes.length }}</p>
       </div>
-      <div class="card-footer">
-        <span>Ver detalles ➔</span>
+    </mat-tab>
+
+    <mat-tab label="Código y Arquitectura">
+      <div class="tab-content">
+        <p>A continuación, algunos fragmentos clave de la lógica del proyecto:</p>
+        
+        <mat-accordion>
+          <mat-expansion-panel *ngFor="let snippet of proyectoActual.snippets" class="custom-panel">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="panel-title">
+                📝 {{ snippet.titulo }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            
+            <div class="code-block">
+              <pre><code>{{ snippet.codigo }}</code></pre>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+        
       </div>
-    </div>
-  </div>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>
+
+<div class="error-msg" *ngIf="!proyectoActual">
+  <h2>Proyecto no encontrado</h2>
+  <a routerLink="/proyectos" class="btn-back">Volver a la galería</a>
 </div>
