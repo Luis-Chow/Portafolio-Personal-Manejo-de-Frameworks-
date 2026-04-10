@@ -25,22 +25,20 @@ export class Home {
     }
   };
 
-  // 1. Nombres de las habilidades actualizados
   public radarChartLabels: string[] = [
     'JavaScript', 
     'C++', 
-    'Videojuegos', 
+    'Godot', 
     'HTML/CSS', 
     'TypeScript',
     'Python'
   ];
   
-  // 2. Valores actualizados en el mismo orden exacto que las etiquetas de arriba
   public radarChartData: ChartConfiguration['data'] = {
     labels: this.radarChartLabels,
     datasets: [
       { 
-        data: [50, 30, 50, 50, 30, 30], // JS: 50, C++: 30, Videojuegos: 50, HTML/CSS: 50, TS: 30, Python: 30
+        data: [50, 30, 30, 50, 30, 30],
         label: 'Nivel de Habilidad (%)',
         backgroundColor: 'rgba(76, 175, 80, 0.2)', 
         borderColor: '#4CAF50', 

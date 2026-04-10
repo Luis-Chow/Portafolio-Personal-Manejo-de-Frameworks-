@@ -13,8 +13,8 @@ export class Projects {
   listaProyectos = [
     {
       id: 'juego-pacman',
-      titulo: 'Juego Estilo Pac-Man',
-      descripcion: 'Desarrollo de un videojuego interactivo con mecánicas clásicas, enemigos, power-ups y sistema de puntaje usando almacenamiento local.',
+      titulo: 'Juego Clon Pac-Man',
+      descripcion: 'Desarrollo de un clon del videojuego interactivo con mecánicas clásicas, enemigos, power-ups y sistema de puntaje usando almacenamiento local.',
       tecnologias: ['JavaScript', 'HTML5 Canvas', 'CSS3']
     },
     {

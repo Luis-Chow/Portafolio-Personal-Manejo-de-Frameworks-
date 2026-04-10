@@ -19,9 +19,32 @@
   margin-bottom: 30px;
 }
 
+::ng-deep .mat-mdc-tab-header {
+  background-color: #2a2a2a !important;
+  border-bottom: 1px solid #444;
+  border-radius: 8px 8px 0 0;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+  color: #b0b0b0 !important;
+}
+
+::ng-deep .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #4CAF50 !important;
+  font-weight: bold;
+}
+
+::ng-deep .mat-mdc-tab-group.mat-primary .mat-mdc-tab-ink-bar {
+  background-color: #4CAF50 !important;
+}
+
 .tab-content {
-  padding: 30px 10px;
+  padding: 30px 20px;
   color: #e0e0e0;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
 }
 
 .tab-content h3 {
@@ -37,7 +60,6 @@
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid #333;
 }
 
 .carousel-image {
@@ -71,13 +93,17 @@
 }
 
 ::ng-deep .custom-panel {
-  background-color: #1e1e1e !important;
+  background-color: #2a2a2a !important; 
   color: #e0e0e0 !important;
-  border: 1px solid #333;
+  border: 1px solid #444;
   margin-bottom: 10px;
 }
 
-::ng-deep .panel-title {
+::ng-deep .mat-expansion-panel-header {
+  background-color: #333 !important;
+}
+
+::ng-deep .mat-expansion-panel-header-title {
   color: #ffffff !important;
   font-weight: bold;
 }
@@ -88,9 +114,55 @@
   border-radius: 5px;
   overflow-x: auto;
   border-left: 4px solid #4CAF50;
+  margin-top: 15px;
 }
 
 .code-block code {
   font-family: 'Courier New', Courier, monospace;
   color: #a5d6a7;
+}
+
+.error-msg {
+  text-align: center;
+  padding: 50px;
+  color: #e0e0e0;
+}
+
+.github-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.github-section h3 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.github-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #24292e;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: 1px solid #444;
+  transition: all 0.3s ease;
+}
+
+.github-btn:hover {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
 }
