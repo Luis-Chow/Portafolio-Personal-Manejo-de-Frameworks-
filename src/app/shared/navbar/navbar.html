@@ -1,12 +1,19 @@
 <nav class="mi-navbar">
   <div class="navbar-content">
     <div class="logo">
-      <a routerLink="/">🚀 Mi Portafolio</a>
+      <a routerLink="/inicio">🚀 Mi Portafolio</a>
     </div>
     <ul class="enlaces">
-      <li><a routerLink="/">Inicio</a></li>
-      <li><a routerLink="/proyectos">Proyectos</a></li>
-      <li><a routerLink="/login" class="btn-login">Iniciar Sesión</a></li>
+      <li *ngIf="authService.estaLogueado()"><a routerLink="/inicio">Inicio</a></li>
+      <li *ngIf="authService.estaLogueado()"><a routerLink="/proyectos">Proyectos</a></li>
+      
+      <li *ngIf="!authService.estaLogueado()">
+        <a routerLink="/login" class="btn-login">Iniciar Sesión</a>
+      </li>
+
+      <li *ngIf="authService.estaLogueado()">
+        <a href="javascript:void(0)" class="btn-login" style="background-color: #ff5252;" (click)="cerrarSesion()">Cerrar Sesión</a>
+      </li>
     </ul>
   </div>
 </nav>

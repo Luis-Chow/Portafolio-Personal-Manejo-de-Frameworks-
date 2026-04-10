@@ -60,3 +60,15 @@ button:disabled {
   font-weight: bold;
   text-decoration: none;
 }
+
+.alerta-error {
+  background-color: rgba(255, 82, 82, 0.1);
+  color: #ff5252;
+  padding: 10px;
+  border: 1px solid #ff5252;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}

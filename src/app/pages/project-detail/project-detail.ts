@@ -16,7 +16,6 @@ export class ProjectDetail implements OnInit {
   proyectoActual: any;
   imagenActualIndex = 0;
 
-  // Tu base de datos de proyectos detallada
   dbProyectos: any = {
     'juego-pacman': {
       titulo: 'Juego Estilo Pac-Man',
@@ -56,19 +55,17 @@ export class ProjectDetail implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // Obtenemos el ID de la URL y buscamos el proyecto
     this.proyectoId = this.route.snapshot.paramMap.get('id');
     if (this.proyectoId) {
       this.proyectoActual = this.dbProyectos[this.proyectoId];
     }
   }
 
-  // --- Lógica del Carrusel ---
   siguienteImagen() {
     if (this.imagenActualIndex < this.proyectoActual.imagenes.length - 1) {
       this.imagenActualIndex++;
     } else {
-      this.imagenActualIndex = 0; // Vuelve a la primera
+      this.imagenActualIndex = 0;
     }
   }
 
@@ -76,7 +73,7 @@ export class ProjectDetail implements OnInit {
     if (this.imagenActualIndex > 0) {
       this.imagenActualIndex--;
     } else {
-      this.imagenActualIndex = this.proyectoActual.imagenes.length - 1; // Va a la última
+      this.imagenActualIndex = this.proyectoActual.imagenes.length - 1;
     }
   }
 }

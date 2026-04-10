@@ -4,10 +4,10 @@
   <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
     
     <div class="form-group">
-      <label>Correo Electrónico</label>
-      <input type="email" formControlName="email" placeholder="ejemplo@correo.com">
-      <span class="error" *ngIf="authForm.get('email')?.invalid && authForm.get('email')?.touched">
-        Por favor ingresa un correo válido.
+      <label>Nombre de Usuario</label>
+      <input type="text" formControlName="usuario" placeholder="SinEspacios">
+      <span class="error" *ngIf="authForm.get('usuario')?.invalid && authForm.get('usuario')?.touched">
+        El usuario es obligatorio y no puede contener espacios.
       </span>
     </div>
 
@@ -15,7 +15,7 @@
       <label>Contraseña</label>
       <input type="password" formControlName="password" placeholder="Mínimo 6 caracteres">
       <span class="error" *ngIf="authForm.get('password')?.invalid && authForm.get('password')?.touched">
-        La contraseña es obligatoria y debe tener al menos 6 caracteres.
+        Mínimo 6 caracteres válidos (no pueden ser solo espacios).
       </span>
     </div>
 
@@ -31,4 +31,9 @@
       {{ esRegistro ? 'Inicia sesión aquí' : 'Regístrate aquí' }}
     </a>
   </p>
+
+  <div class="alerta-error" *ngIf="mensajeError">
+      {{ mensajeError }}
+    </div>
 </div>
+

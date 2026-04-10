@@ -3,11 +3,13 @@ import { Home } from './pages/home/home';
 import { Auth } from './pages/auth/auth';
 import { Projects } from './pages/projects/projects';
 import { ProjectDetail } from './pages/project-detail/project-detail';
+import { authGuard } from './shared/guards/auth-guard';
 
 export const routes: Routes = [
-  { path: '', component: Home },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: Auth },
-  { path: 'proyectos', component: Projects },
-  { path: 'proyectos/:id', component: ProjectDetail },
-  { path: '**', redirectTo: '' }
+  { path: 'inicio', component: Home, canActivate: [authGuard] }, 
+  { path: 'proyectos', component: Projects, canActivate: [authGuard] },
+  { path: 'proyectos/:id', component: ProjectDetail, canActivate: [authGuard] },
+  { path: '**', redirectTo: 'login' }
 ];
