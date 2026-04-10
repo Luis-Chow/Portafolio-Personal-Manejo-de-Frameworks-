@@ -1,14 +1,14 @@
 .app-layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ocupa al menos toda la altura de la pantalla */
+  min-height: 100vh;
 }
 
 .main-content {
-  flex: 1; /* Esto empuja el footer hacia abajo */
+  flex: 1; 
   width: 100%;
-  max-width: 1200px; /* Ancho máximo para que no se estire de más */
-  margin: 0 auto; /* Centra el contenedor en la pantalla */
+  max-width: 900px;
+  margin: 0 auto; 
   padding: 20px;
   box-sizing: border-box;
 }

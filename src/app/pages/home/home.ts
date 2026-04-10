@@ -29,7 +29,7 @@ export class Home {
   public radarChartLabels: string[] = [
     'JavaScript', 
     'C++', 
-    'Desarrollo de Videojuegos', 
+    'Videojuegos', 
     'HTML/CSS', 
     'TypeScript',
     'Python'

@@ -20,8 +20,16 @@
 .chart-wrapper {
   max-width: 600px;
   margin: 30px auto;
-  background: #1e1e1e; /* Tarjeta oscura para el gráfico */
+  background: #1e1e1e;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Sombra más fuerte */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  max-width: 100%;
 }

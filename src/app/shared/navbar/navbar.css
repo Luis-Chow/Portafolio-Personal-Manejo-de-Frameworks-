@@ -2,38 +2,46 @@
   background-color: #1e1e1e;
   border-bottom: 1px solid #333;
   display: flex;
-  justify-content: center; /* Centra el contenedor interno */
+  justify-content: center; 
 }
+
 .navbar-content {
   width: 100%;
-  max-width: 1200px; /* Mismo ancho que el contenido principal */
+  max-width: 900px; /* Reducimos el ancho para hacerlo más compacto */
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* ¡Esta es la clave! Cambiamos space-between por center */
   align-items: center;
+  gap: 80px; /* Separación entre el logo y los enlaces */
   padding: 15px 20px;
 }
+
 .logo a {
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
 }
+
 .enlaces {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px; /* Separación entre los botones del menú */
   margin: 0;
   align-items: center;
+  padding: 0;
 }
+
 .enlaces a {
   color: #e0e0e0;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s;
 }
+
 .enlaces a:hover {
   color: #4CAF50;
 }
+
 .btn-login {
   background-color: #4CAF50;
   padding: 8px 15px;
