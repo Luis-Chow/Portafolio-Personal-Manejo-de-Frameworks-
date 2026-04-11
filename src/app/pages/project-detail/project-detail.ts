@@ -31,7 +31,7 @@ export class ProjectDetail implements OnInit {
 
     'reproductor-musica': {
       titulo: 'Reproductor de Música',
-      descripcion: 'Aplicación web construida para reproducir audio con controles personalizad`~`s, manipulando el DOM para actualizar la barra de progreso y el estado de reproducción.',
+      descripcion: 'Aplicación web construida para reproducir audio con controles personalizados, manipulando el DOM para actualizar la barra de progreso y el estado de reproducción.',
       imagenes: [
         ''
       ],
@@ -40,7 +40,7 @@ export class ProjectDetail implements OnInit {
 
     'visualizador-tiempo': {
       titulo: 'Visualizador del Tiempo en Angular',
-      descripcion: 'Mi primera aplicación estructurada con el framework Angular, diseñada para visualizar datos temporales utilizando la arquitectura basada en componentes del framework.',
+      descripcion: 'Mi primera aplicación estructurada con el framework Angular, diseñada para visualizar datos temporales utilizando la arquitectura basada en componentes del framework. Para la materia Manejo de Frameworks.',
       imagenes: [
         ''
       ],
@@ -51,7 +51,18 @@ export class ProjectDetail implements OnInit {
       titulo: 'Sistema para Academia',
       descripcion: 'Diseño y desarrollo de una aplicación de escritorio hecha con C# para recrear un sistema para Academias inspirado en EDUCA. Para la materia de Programación Visual',
       imagenes: [
-        ''
+        '/assets/SA0.jpg',
+        '/assets/SA1.jpg',
+        '/assets/SA2.jpg',
+        '/assets/SA3.jpg',
+        '/assets/SA4.jpg',
+        '/assets/SA5.jpg',
+        '/assets/SA6.jpg',
+        '/assets/SA7.jpg',
+        '/assets/SA8.jpg',
+        '/assets/SA9.jpg',
+        '/assets/SA10.jpg',
+        '/assets/SA11.jpg'
       ],
       github: 'https://github.com/Luis-Chow/SistemaAcademia-Visual'
     }

@@ -14,26 +14,26 @@ export class Projects {
     {
       id: 'juego-pacman',
       titulo: 'Juego Clon Pac-Man',
-      descripcion: 'Desarrollo de un clon del videojuego interactivo con mecánicas clásicas, enemigos, power-ups y sistema de puntaje usando almacenamiento local.',
+      descripcion: 'Proyecto de Desarrollo Web I, desarrollo de un clon del videojuego Pac-Man.',
       tecnologias: ['JavaScript', 'HTML5 Canvas', 'CSS3']
     },
     {
       id: 'reproductor-musica',
       titulo: 'Reproductor de Música',
-      descripcion: 'Aplicación web para reproducir pistas de audio con interfaz de controles personalizados y visualización de progreso.',
+      descripcion: 'Proyecto de Desarrollo Web I, reproductor de música web',
       tecnologias: ['JavaScript', 'DOM Manipulation']
     },
     {
       id: 'visualizador-tiempo',
       titulo: 'Visualizador del Tiempo',
-      descripcion: 'Proyecto de visualización de datos temporales construido con una arquitectura moderna basada en componentes.',
+      descripcion: 'Proyecto de Manejo de Frameworks, visualizador de tiempo',
       tecnologias: ['Angular', 'TypeScript']
     },
     {
       id: 'sistema-academia',
       titulo: 'Sistema para academia',
-      descripcion: 'Proyecto de sistema de academia ',
-      tecnologias: ['UML', 'Arquitectura de Software']
+      descripcion: 'Proyecto de Programación Visual inspirado en EDUCA',
+      tecnologias: ['UML', 'C#', 'Figma', 'Arquitectura de Software','NPGSQL']
     }
   ];
 }
