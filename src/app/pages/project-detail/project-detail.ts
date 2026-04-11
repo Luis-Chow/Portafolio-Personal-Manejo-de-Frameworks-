@@ -33,16 +33,27 @@ export class ProjectDetail implements OnInit {
       titulo: 'Reproductor de Música',
       descripcion: 'Aplicación web construida para reproducir audio con controles personalizados, manipulando el DOM para actualizar la barra de progreso y el estado de reproducción.',
       imagenes: [
-        ''
+        '/assets/RM1.jpg',
+        '/assets/RM2.jpg'
       ],
-      github: 'https://github.com/Luis-Chow'
+      github: 'https://github.com/Luis-Chow/Reproductor-de-Musica-Desarrollo-Web-I'
     },
 
     'visualizador-tiempo': {
       titulo: 'Visualizador del Tiempo en Angular',
       descripcion: 'Mi primera aplicación estructurada con el framework Angular, diseñada para visualizar datos temporales utilizando la arquitectura basada en componentes del framework. Para la materia Manejo de Frameworks.',
       imagenes: [
-        ''
+        '/assets/VT1.jpg',
+        '/assets/VT2.jpg',
+        '/assets/VT3.jpg',
+        '/assets/VT4.jpg',
+        '/assets/VT5.jpg',
+        '/assets/VT6.jpg',
+        '/assets/VT7.jpg',
+        '/assets/VT8.jpg',
+        '/assets/VT9.jpg',
+        '/assets/VT10.jpg',
+        '/assets/VT11.jpg'
       ],
       github: 'https://github.com/Luis-Chow/Visualizador-del-Tiempo-con-Angular'
     },
